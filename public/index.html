@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hi</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <title>Alt Electronics</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Alt Electronics</h1>
+    </header>
+    <main class="container">
+      <div class="flex space-bw">
+        <div class="left-section">
+          <p>Invoice Number:0001</p>
+          <p>Order ID:16/10/21/0001</p>
+          <p>GST No- 02AABCD3950K1A0</p>
+        </div>
+        <div class="right-section">
+          <date>16 October 2021</date>
+          <p>Operator: John Snow</p>
+        </div>
+      </div>
+      <hr />
+      <form action="">
+        <div class="flex space-bw m-l-r label-head">
+          <div>
+            <label class="labels m-l" for="" title="S.no">S.no</label>
+            <input type="text" placeholder="1" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="Product-name"
+              >Product-name</label
+            >
+            <input type="text" placeholder="Earphones" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="Quantity">Quantity</label>
+            <input type="text" placeholder="1" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="Rate">Rate</label>
+            <input type="text" placeholder="500" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="Discount">Discount</label>
+            <input type="text" placeholder="0" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="GST">GST</label>
+            <input type="text" placeholder="18%" />
+          </div>
+​
+          <div>
+            <label class="labels" for="" title="Total">Total</label>
+            <input type="text" placeholder="590" />
+          </div>
+        </div>
+      </form>
+      <hr />
+      <div class="total">
+        <p>Subtotal: 💵590</p>
+        <p>GST: 18%</p>
+        <button class="btn" type="submit">Generate Invoice</button>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,135 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+​
+/* Custom styles */
+​
+body{
+  margin: 2rem 0rem;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  text-transform: capitalize;
+  background-color: rgb(148, 151, 151);
+}
+​
+.container{
+  max-width: 1250px;
+  width: 90%;
+  margin: 0 auto;
+}
+​
+.flex{
+  display: flex;
+}
+.space-bw{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}
+​
+/* main{
+  border: 1px solid;
+​
+} */
+​
+.header{
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+​
+.left-section p{
+  margin: 1rem 2rem;
+}
+.right-section{
+  margin: 1rem 2rem;
+}
+​
+.right-section p{
+  margin-top: 1rem;
+}
+​
+/* table */
+​
+.m-l-r{
+  margin: 0 1rem;
+}
+​
+.label-head{
+  margin: 2rem 0rem;
+}
+input{
+  display: block;
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  border-bottom: 1px solid white;
+  width: 80%;
+  color: white;
+  outline: none;
+}
+input::placeholder{
+  color: rgba(255, 255, 255, 0.514);
+}
+​
+.total{
+  /* border: 1px solid gray; */
+  width: 20%;
+  margin-right: 4rem;
+  position: absolute;
+  right: 0;
+  margin-top: 3rem;
+  line-height: 2;
+}
+.total button{
+  padding: 0.3rem 1rem;
+​
+​
+}
+.labels{
+  padding: 2rem 0rem;
+}
