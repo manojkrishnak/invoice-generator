@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/manojkrishnak/invoice-generator#readme",
   "dependencies": {
+    "easyinvoice": "^1.0.148",
     "fastify": "^3.22.0",
-    "fastify-static": "^4.4.2",
-    "pdfkit": "^0.12.3"
+    "fastify-static": "^4.4.2"
   }
 }

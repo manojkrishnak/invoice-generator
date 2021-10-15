@@ -1,11 +1,4 @@
-const {
-    invoiceData,
-    generateHeader,
-    generateFooter,
-    generateTableRow,
-    generateCustomerInformation
-} = require("../invoiceInfo");
-
+const { invoiceInfo } = require("../invoiceInfo");
 
 function invoiceRoutes(fastify, options, done) {
   fastify.get("/", function (req, reply) {
@@ -13,24 +6,15 @@ function invoiceRoutes(fastify, options, done) {
   });
 
   fastify.get("/create_invoice", function (req, reply) {
+    const easyinvoice = require("easyinvoice");
     const fs = require("fs");
-    const PDFDocument = require("pdfkit");
+    easyinvoice.createInvoice(invoiceInfo(req), function (result) {
+      const pdf = result.pdf;
+      fs.writeFileSync("invoice.pdf", pdf, "base64");
+    });
 
-    function createInvoice(invoice, path) {
-        let doc = new PDFDocument({ margin: 50 });
-      
-        generateHeader(doc);
-        generateCustomerInformation(doc, invoice);
-        generateTableRow(doc, invoice);
-        generateFooter(doc);
-        doc.pipe(fs.createWriteStream(path));
-        doc.end();
-        reply.code(200).send("success");
-      }
-
-      createInvoice(req.params, "Invoice.pdf")
+    return reply.code(200).send("success");
   });
-
   done();
 }
 
