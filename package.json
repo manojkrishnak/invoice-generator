@@ -19,6 +19,7 @@
   "homepage": "https://github.com/manojkrishnak/invoice-generator#readme",
   "dependencies": {
     "fastify": "^3.22.0",
-    "fastify-static": "^4.4.2"
+    "fastify-static": "^4.4.2",
+    "pdfkit": "^0.12.3"
   }
 }
