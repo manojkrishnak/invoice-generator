@@ -3,7 +3,7 @@ const path = require('path');
 const PORT = 5678;
 
 
-
+fastify.register(require('fastify-formbody'))
 fastify.register(require('fastify-static'), {
   root: path.join(__dirname, 'public'),
   prefix: '/public/', // optional: default '/'
@@ -14,7 +14,7 @@ fastify.register(require("./routes/index"));
 
 
 
-fastify.listen(PORT, function(err, address){
+fastify.listen(PORT,"0.0.0.0", function(err, address){
     if(err){
         fastify.log.error(err);
         process.exit(1);

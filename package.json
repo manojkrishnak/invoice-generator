@@ -4,7 +4,8 @@
   "description": "A basic Invoice Generating tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   "dependencies": {
     "easyinvoice": "^1.0.148",
     "fastify": "^3.22.0",
+    "fastify-formbody": "^5.1.0",
     "fastify-static": "^4.4.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
