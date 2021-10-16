@@ -1,5 +1,7 @@
 const fs = require("fs");
 function invoiceInfo(invoice){
+  invoice.price = parseInt(invoice.price);
+  invoice.tax = parseInt(invoice.tax);
     let data = {
         //    Let's add a recipient
         client: {
@@ -19,31 +21,20 @@ function invoiceInfo(invoice){
           country: "India",
         },
         logo: fs.readFileSync(
-          "C:/Users/manoj/OneDrive/Pictures/altcampusLogo.png",
+          "./altcampus-logo.png",
           "base64"
         ),
         invoiceNumber: "2021.0001",
         invoiceDate: formattedDate(),
         products: [
-          {
-            quantity: "2",
-            description: "Test1",
-            tax: 6,
-            price: 33.87,
-          },
-          {
-            quantity: "4",
-            description: "Test2",
-            tax: 21,
-            price: 10.45,
-          },
+          invoice
         ],
       
         //We will use bottomNotice to add a message of choice to the bottom of our invoice
         bottomNotice: "Kindly pay your invoice within 15 days.<br>All numbers are in Indian Rupees(INR)",
         locale: 'en-US',
-        currency: "USD",
-        taxNotation: "vat",
+        currency: "INR",
+        taxNotation: "gst",
       
         //      Using margin we can regulate how much white space we would like to have from the edges of our invoice
         marginTop: 25,
